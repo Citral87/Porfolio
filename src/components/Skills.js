@@ -3,7 +3,7 @@ import Modal from "react-modal";
 import "../../src/components/css/Skills.css";
 import "../../src/components/css/Modal.css";
 
-Modal.setAppElement("#root"); 
+Modal.setAppElement("#root");
 
 function Skills() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -75,8 +75,6 @@ function Skills() {
     },
   ];
 
-  
-
   function openModal(skill) {
     setSelectedSkill(skill);
     setModalIsOpen(true);
@@ -85,8 +83,6 @@ function Skills() {
   function closeModal() {
     setModalIsOpen(false);
   }
-
- 
 
   return (
     <section id="skills">

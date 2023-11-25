@@ -58,41 +58,40 @@
     text-shadow: 1px 1px 2px black;
 }
 
-/* CSS pour les écrans de tablettes */
+/* pour les écrans de tablettes */
 @media (max-width: 768px) {
-    .main-carousel .slide img {
-      padding: 15px;
-      max-height: 250px; /* ajustez selon l'apparence souhaitée */
-    }
-  
-    .carousel-text {
-      font-size: 22px; /* réduisez la taille de la police si nécessaire */
-      width: 40%; /* ajustez la largeur si nécessaire */
-    }
-  
-    .carousel-quote {
-      font-size: 24px; /* réduisez la taille de la police si nécessaire */
-      width: 40%; /* ajustez la largeur si nécessaire */
-    }
+  .main-carousel .slide img {
+    padding: 15px;
+    max-height: 250px;  
   }
-  
-  /* CSS pour les téléphones portables */
-  @media (max-width: 480px) {
-    .main-carousel .slide img {
-      padding: 10px;
-      max-height: 200px; /* ajustez selon l'apparence souhaitée */
-    }
-  
-    .carousel-text {
-      font-size: 18px; /* réduisez la taille de la police si nécessaire */
-      width: 60%; /* ajustez la largeur si nécessaire */
-      bottom: 20px; /* ajustez la position si nécessaire */
-    }
-  
-    .carousel-quote {
-      font-size: 20px; /* réduisez la taille de la police si nécessaire */
-      width: 60%; /* ajustez la largeur si nécessaire */
-      top: 20px; /* ajustez la position si nécessaire */
-    }
+
+  .carousel-text {
+    font-size: 22px;  
+    width: 40%;  
   }
-  
+
+  .carousel-quote {
+    font-size: 24px;  
+    width: 40%;  
+  }
+}
+
+/* pour les téléphones portables */
+@media (max-width: 480px) {
+  .main-carousel .slide img {
+    padding: 10px;
+    max-height: 200px;  
+  }
+
+  .carousel-text {
+    font-size: 18px;  
+    width: 60%; 
+    bottom: 20px; 
+  }
+
+  .carousel-quote {
+    font-size: 20px; 
+    width: 60%; 
+    top: 20px; 
+  }
+}

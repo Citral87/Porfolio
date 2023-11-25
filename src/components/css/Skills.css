@@ -80,7 +80,7 @@
   border-radius: 10px;
 }
 
-/* CSS pour les écrans de tablettes */
+/* pour les écrans de tablettes */
 @media (max-width: 768px) {
   #skills h2 {
     font-size: 32px;
@@ -106,7 +106,7 @@
   }
 }
 
-/* CSS pour les téléphones portables */
+/* pour les téléphones portables */
 @media (max-width: 480px) {
   #skills h2 {
     font-size: 28px;
