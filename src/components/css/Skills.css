@@ -1,0 +1,138 @@
+#skills {
+  text-align: center;
+  margin: 2em 0;
+  font-family: 'Lato', sans-serif;
+  
+}
+
+.skill-set {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; 
+}
+#skills h2 {
+  font-size: 38px;
+  color: rgba(3,96,129,1);
+  text-decoration: underline;
+  
+}
+
+.skill-logo {
+  margin: 1em;
+  position: relative;
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  overflow: hidden; 
+  cursor: pointer;
+}
+
+.skill-logo img {
+  max-width: 100px; 
+  max-height: 100px; 
+  width: auto; 
+  height: auto; 
+  transition: all 0.7s ease-in-out; 
+}
+
+.skill-logo:hover img {
+  transform: scale(1.5); 
+  opacity: 0; 
+}
+
+.skill-description {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  transform: scale(0);
+  opacity: 0;
+  transition: all 0.5s ease; 
+  font-size: 0.8em; 
+}
+
+.skill-logo:hover .skill-description {
+  transform: scale(1); 
+  opacity: 1; 
+}
+
+.Modal {
+  position: relative;
+  
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  
+}
+
+.Modal p {
+    background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(85,139,167,1) 0%, rgba(2,0,36,1) 73%, rgba(0,212,255,1) 100%);
+  color: #ffffff;
+  font-family: 'Lato', sans-serif;
+  padding: 10px ;
+  border-radius: 10px;
+}
+
+/* CSS pour les écrans de tablettes */
+@media (max-width: 768px) {
+  #skills h2 {
+    font-size: 32px;
+  }
+
+  .skill-logo img {
+    max-width: 80px;
+    max-height: 80px;
+  }
+
+  .skill-description {
+    font-size: 0.7em;
+  }
+
+  .modal-close-button {
+    top: 5px;
+    right: 5px;
+    font-size: 20px;
+  }
+
+  .Modal p {
+    font-size: 0.9em;
+  }
+}
+
+/* CSS pour les téléphones portables */
+@media (max-width: 480px) {
+  #skills h2 {
+    font-size: 28px;
+  }
+
+  .skill-logo {
+    margin: 0.5em;
+  }
+
+  .skill-logo img {
+    max-width: 60px;
+    max-height: 60px;
+  }
+
+  .skill-description {
+    font-size: 0.6em;
+  }
+
+  .modal-close-button {
+    top: 2px;
+    right: 2px;
+    font-size: 18px;
+  }
+
+  .Modal p {
+    font-size: 0.8em;
+  }
+}
+

@@ -1,0 +1,87 @@
+#contact {
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(85,139,167,1) 0%, rgba(2,0,36,1) 73%, rgba(0,212,255,1) 100%); 
+    padding: 2em;
+    border-radius: 10px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    
+    max-width: 900px; 
+    margin: 40px auto; 
+  }
+  
+  #contact h2 {
+    color: #ffffff;
+    margin-bottom: 1em;
+    font-family: 'Lato', sans-serif;
+    font-size: 32px;
+    text-decoration: underline;
+    text-shadow: 1px 1px 2px black; 
+    text-align: center;
+  }
+  
+  #contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em; 
+    color: #ffffff;
+    font-size: 18px; 
+    text-shadow: 1px 1px 2px black; 
+  }
+  
+  #contact form input,
+  #contact form textarea {
+    padding: 10px;
+    border-radius: 5px; 
+    border: 1px solid #ddd; 
+    font-size: 16px; 
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+  }
+  
+  #contact form button {
+    padding: 10px 15px;
+    background: linear-gradient(to right, #214CE4, #036081); 
+    color: white;
+    border: none;
+    border-radius: 20px; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  #contact form button:hover {
+    background: linear-gradient(to right, #036081, #214CE4);  
+  }
+  
+  /* pour les écrans de tablettes */
+@media (max-width: 768px) {
+  #contact {
+    max-width: 600px;
+    padding: 1.5em;
+  }
+
+  #contact form input,
+  #contact form textarea,
+  #contact form button {
+    font-size: 14px; 
+  }
+}
+
+/* pour les téléphones portables */
+@media (max-width: 480px) {
+  #contact {
+    max-width: 100%; 
+    margin: 20px;
+    padding: 1em;
+  }
+
+  #contact form input,
+  #contact form textarea {
+    font-size: 12px; 
+  }
+
+  #contact form button {
+    font-size: 16px; 
+  }
+}
