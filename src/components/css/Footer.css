@@ -6,15 +6,17 @@ footer {
   align-items: center;
   gap: 15px;
   flex-wrap: wrap; 
+  background: linear-gradient(90deg,#558ba7,#020024 73%,#00d4ff);
 }
 
 footer .footer-item, footer a {
   display: flex;
   align-items: center;
-  gap: 8px;
-  color: #333; 
-  font-size: 20px; 
+  gap: 15px;
+  color: white; 
+  font-size: 36px; 
   transition: color 0.3s ease; 
+  padding: 10px;
 }
 
 footer a:hover, footer .footer-item:hover {

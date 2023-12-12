@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import Navbar from './components/Navbar';
-import BannerCarousel from './components/BannerCarousel';
 import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
@@ -25,7 +24,6 @@ function App() {
       <div className="App">
         <Navbar />
         <About />
-        <BannerCarousel />
         <Skills />
         <Projects />
         <ContactForm />

@@ -1,7 +1,7 @@
 #skills {
   text-align: center;
-  margin: 2em 0;
   font-family: 'Lato', sans-serif;
+  background: linear-gradient(90deg,#558ba7,#020024 73%,#00d4ff);
   
 }
 
@@ -12,9 +12,11 @@
 }
 #skills h2 {
   font-size: 38px;
-  color: rgba(3,96,129,1);
+  color: white;
   text-decoration: underline;
-  
+  margin: 0;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 .skill-logo {
@@ -72,8 +74,7 @@
 }
 
 .Modal p {
-    background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgba(85,139,167,1) 0%, rgba(2,0,36,1) 73%, rgba(0,212,255,1) 100%);
+  background: linear-gradient(90deg,#558ba7,#020024 73%,#00d4ff);
   color: #ffffff;
   font-family: 'Lato', sans-serif;
   padding: 10px ;

@@ -59,20 +59,7 @@ function Skills() {
       description:
         "J ai optimisé les sites web pour les moteurs de recherche, en améliorant leur accessibilité et leur visibilité.",
     },
-    {
-      name: "GIT",
-      logo: "../../logo/GitHub-logo.png",
-      text: "GitHub - Collaboration et gestion de code",
-      description:
-        "J ai utilisé GitHub pour la gestion du code source, en collaborant efficacement avec d autres développeurs.",
-    },
-    {
-      name: "RESP",
-      logo: "../../logo/logoresponsive.png",
-      text: "Responsive Design",
-      description:
-        "J ai conçu des sites web adaptatifs, qui offrent une expérience optimale sur tous les appareils et tailles d écran.",
-    },
+    
   ];
 
   function openModal(skill) {

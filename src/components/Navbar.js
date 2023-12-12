@@ -13,7 +13,7 @@ function Navbar() {
         <Link to="about" smooth={true} aria-label="Aller à la section À propos">À propos</Link>
         <Link to="projects" smooth={true} aria-label="Aller à la section Projets">Projets</Link>
         <Link to="contact" smooth={true} aria-label="Aller à la section Contact">Contact</Link>
-        <a href="public/cv.pdf" download="CV_Thierry_Salzedas.pdf">Télécharger CV</a>
+        <a href= "cv.pdf" download="CV_Thierry_Salzedas.pdf">Télécharger CV</a>
       </div>
     </nav>
   );

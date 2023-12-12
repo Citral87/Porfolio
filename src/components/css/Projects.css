@@ -1,79 +1,55 @@
 #projects {
-  background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgba(85,139,167,1) 0%, rgba(2,0,36,1) 73%, rgba(0,212,255,1) 100%);
-    padding: 2em;
-    border-radius: 10px; 
-  }
-  
-  #projects h2 {
-    text-align: center; 
-    margin-bottom: 2em; 
-    color: #ffffff;
-    font-size: 38px;
-    text-decoration: underline;
-    font-family: 'Lato', sans-serif;
-    text-shadow: 1px 1px 2px black; 
-  }
-
-  .my-masonry-grid {
-    display: flex;
-    margin-left: -30px; 
-    width: auto;
-  }
-  
-  .my-masonry-grid_column {
-    padding-left: 30px; 
-    background-clip: padding-box;
-  }
-  
-  .my-masonry-grid_column > div { 
-    display: flex; 
-  flex-direction: column; 
-  justify-content: space-between; 
-  box-shadow: 0px 5px 15px rgba(52, 152, 219, 0.5);
+  background: linear-gradient(90deg,#558ba7,#020024 73%,#00d4ff);
+  padding: 2em;
  
-  
-  background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgba(85,139,167,1) 0%, rgba(2,0,36,1) 73%, rgba(0,212,255,1) 100%);
-    margin-bottom: 30px;
-    border-radius: 7px; 
-    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.1); 
-    overflow: hidden; 
-    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out; 
-    cursor: pointer;
-  }
-  
-  
-  .my-masonry-grid_column > div:hover {
-    transform: scale(1.03);
-    background: linear-gradient(to right, #036081, #214CE4); 
-    box-shadow: 0px 8px 20px #214CE4; 
-  }
-  
-  
-  .my-masonry-grid img {
-    max-height: 100%;
-    object-fit: cover; 
-    height: 300px;
-  }
-  
-  
+}
 
-  .my-masonry-grid h3 {
-    font-size: 1.5em;
-    margin: 0.5em; 
-    color: #f0f0f0;
-    font-family: 'Lato', sans-serif;
-  }
-  
+#projects h2 {
+  text-align: center;
+  margin-bottom: 2em;
+  color: #ffffff;
+  font-size: 38px;
+  text-decoration: underline;
+  font-family: 'Lato', sans-serif;
+  text-shadow: 1px 1px 2px black;
+}
 
-  .my-masonry-grid p {
-    font-size: 1em;
-    margin: 0.5em; 
-    color: aliceblue;
-    font-family: 'Lato', sans-serif;
-  }
-  
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 30px;
+  margin-bottom: 30px; 
+}
+
+
+.project-card {
+  background: linear-gradient(90deg,#558ba7,#020024 73%,#00d4ff);
+  border-radius: 7px;
+  box-shadow: 0px 5px 15px rgba(52, 152, 219, 0.5);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 8px 20px #214CE4;
+}
+
+.project-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.project-card h3, .project-card p {
+  margin: 5px 5px 5px 10px;
+  color: #f0f0f0;
+}
+ 
+.project-card h3 {
+  font-size: 26px;
+}
 
 .overlay {
   position: fixed;
@@ -106,8 +82,7 @@
 
 
 .carousel .slide {
-  background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgba(85,139,167,1) 0%, rgba(2,0,36,1) 73%, rgba(0,212,255,1) 100%);
+  background: linear-gradient(90deg,#558ba7,#020024 73%,#00d4ff);
   text-align: center; 
   border-radius: 0px 0px 15px 15px;
 }
@@ -143,8 +118,7 @@
 .modal-header {
   display: flex;
   justify-content: space-between; 
-  background: rgb(2,0,36);
-background: linear-gradient(90deg, rgba(85,139,167,1) 0%, rgba(2,0,36,1) 73%, rgba(0,212,255,1) 100%);
+  background: linear-gradient(90deg,#558ba7,#020024 73%,#00d4ff);
 
   padding: 20px;
   border-radius: 15px 15px 0px 0px;
@@ -311,6 +285,11 @@ transition: all 0.3s ease 0s;
   .modal button {
     font-size: 14px;
   }
+  
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
 }
 
 /* CSS pour les téléphones portables */
@@ -319,6 +298,9 @@ transition: all 0.3s ease 0s;
     margin-left: -15px;
   }
 
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
   .my-masonry-grid_column {
     padding-left: 15px;
   }

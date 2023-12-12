@@ -5,13 +5,12 @@
   
     margin:  0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    background: rgb(2,0,36);
-background: linear-gradient(90deg, rgba(85,139,167,1) 0%, rgba(2,0,36,1) 73%, rgba(0,212,255,1) 100%); 
+    background: linear-gradient(90deg,#558ba7,#020024 73%,#00d4ff);
   color: #ffffff;
   height: 340px; 
   text-shadow: 1px 1px 3px black;
-  margin-top: 5px;
-  margin-bottom: 5px;
+
+  
   }
   
   #about img {

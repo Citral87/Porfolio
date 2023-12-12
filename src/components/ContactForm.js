@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import '../../src/components/css/ContactForm.css';
 
 function ContactForm() {
@@ -22,6 +24,7 @@ function ContactForm() {
   return (
     <section id="contact">
       <h2>Contact :</h2>
+      <div className="contact-container">
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Nom:</label>
         <input 
@@ -57,6 +60,17 @@ function ContactForm() {
 
         <button type="submit">Me contacter</button>
       </form>
+      <div className="contact-info">
+          <div className="contact-item">
+            <FontAwesomeIcon icon={faPhone} />
+            <span>+33 7 77 93 91 31</span>
+          </div>
+          <div className="contact-item">
+            <FontAwesomeIcon icon={faMapMarkerAlt} />
+            <span>Limoges, France</span>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

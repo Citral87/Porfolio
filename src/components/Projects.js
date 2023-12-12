@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import Masonry from 'react-masonry-css';
 import Modal from 'react-modal';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import '../../src/components/css/Projects.css'
+import '../../src/components/css/Projects.css';
 
 Modal.setAppElement('#root');
 
@@ -23,10 +22,7 @@ const skillsData = {
 function Projects() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState({});
-  const [activeFilter, setActiveFilter] = useState('');
-  const clearFilter = () => {
-    setActiveFilter('');
-  };
+  
 
   const projects = [
     {
@@ -107,9 +103,7 @@ function Projects() {
     700: 2,
     500: 1
   };
-  const filterProjects = (skillName) => {
-    setActiveFilter(skillName);
-  };
+ 
   const openModal = (project) => {
     
     const projectSkills = project.skills.map(skill => ({ name: skill, logo: skillsData[skill] }));
@@ -122,75 +116,52 @@ function Projects() {
     
   };
 
-  return (
-    <section id="projects">
-      <h2>Mes Projets :</h2>
-      <div className="skills-filter">
-        <div 
-          className={`skill-filter-item ${activeFilter === '' ? 'active' : ''}`} 
-          onClick={clearFilter}
-        >
-          Tout
+  
+return (
+  <section id="projects">
+    <h2>Mes Projets :</h2>
+    <div className="project-grid"> 
+      {projects.map((project, index) => (
+        <div key={index} className="project-card" onClick={() => openModal(project)}>
+          <img src={project.mainImage} alt={project.title} />
+          <h3>{project.title}</h3>
+          <p>{project.description}</p>
         </div>
-        {Object.entries(skillsData).map(([skillName, logo]) => (
-          <div 
-            key={skillName} 
-            className={`skill-filter-item ${activeFilter === skillName ? 'active' : ''}`} 
-            onClick={() => filterProjects(skillName)}
-          >
-            <img src={logo} alt={skillName} />
-          </div>
-        ))}
-      </div>
-      <Masonry
-        breakpointCols={breakpointColumnsObj}
-        className="my-masonry-grid"
-        columnClassName="my-masonry-grid_column"
-      >
-        {projects
-          .filter(project => activeFilter === '' || project.skills.includes(activeFilter))
-          .map((project, index) => (
-            <div key={index} className="project-card" onClick={() => openModal(project)}>
-              <img src={project.mainImage} alt={project.title} />
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-            </div>
-        ))}
-      </Masonry>
-
-      <Modal
-  isOpen={modalIsOpen}
-  onRequestClose={closeModal}
-  contentLabel="Project Details"
-  className="modal"
-  overlayClassName="overlay"
->
-  <div className='modal-header'>
-  <div className="close-button" onClick={closeModal}>&times;</div>
-    <div className="modal-title-description">
-      <h2>{selectedProject.title}</h2>
-      <p>{selectedProject.fullDescription}</p>
-    </div>
-    <div className="project-skills">
-      {selectedProject.skills && selectedProject.skills.map((skill, index) => (
-        <img key={index} src={skill.logo} alt={skill.name} />
       ))}
     </div>
-  </div>
-  <Carousel>
-  {selectedProject.images && selectedProject.images.map((image, index) => (
-    <div key={index} className="carousel-slide">
-      <img src={image} alt={`Slide ${index}`} />
-      {selectedProject.title === 'Optimisation SEO pour Nina Carducci' && (
-        <div className="carousel-caption">
-          {index === 0 ? "Avant" : index === 1 ? "Après" : ""}
+      
+
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        contentLabel="Project Details"
+        className="modal"
+        overlayClassName="overlay"
+      >
+        <div className='modal-header'>
+          <div className="close-button" onClick={closeModal}>&times;</div>
+          <div className="modal-title-description">
+            <h2>{selectedProject.title}</h2>
+            <p>{selectedProject.fullDescription}</p>
+          </div>
+          <div className="project-skills">
+            {selectedProject.skills && selectedProject.skills.map((skill, index) => (
+              <img key={index} src={skill.logo} alt={skill.name} />
+            ))}
+          </div>
         </div>
-      )}
-    </div>
-  ))}
-</Carousel>
-
-
+        <Carousel>
+          {selectedProject.images && selectedProject.images.map((image, index) => (
+            <div key={index} className="carousel-slide">
+              <img src={image} alt={`Slide ${index}`} />
+              {selectedProject.title === 'Optimisation SEO pour Nina Carducci' && (
+                <div className="carousel-caption">
+                  {index === 0 ? "Avant" : index === 1 ? "Après" : ""}
+                </div>
+              )}
+            </div>
+          ))}
+        </Carousel>
         <button className='modal-button' onClick={closeModal}>Fermer</button>
       </Modal>
     </section>
