@@ -109,10 +109,13 @@ form button:hover {
   .contact-info, .contact-form-container {
     flex-basis: 100%;
   }
-  .contact-form input[type="text"],
-  .contact-form input[type="email"],
-  .contact-form textarea {
+  form input[type="text"],
+ form input[type="email"],
+  form textarea {
     width: auto; /* Make input width responsive */
+  }
+  .contact-wrapper {
+    flex-direction: column;
   }
 }
 
