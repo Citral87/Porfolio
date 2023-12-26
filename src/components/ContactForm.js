@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhone, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { faPhone, faMapMarkerAlt , faEnvelope} from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import '../../src/components/css/ContactForm.css';
 
 function ContactForm() {
@@ -23,9 +24,39 @@ function ContactForm() {
 
   return (
     <section id="contact">
-      <h2>Contact :</h2>
-      <div className="contact-container">
-      <form onSubmit={handleSubmit}>
+      <div className="contact-wrapper">
+        <div className="contact-info">
+          <h3>Mes Coordonnées</h3>
+          <div className="contact-item">
+            <FontAwesomeIcon icon={faPhone} />
+            <span>+33 7 77 93 91 31</span>
+          </div>
+          <div className="contact-item">
+            <FontAwesomeIcon icon={faMapMarkerAlt} />
+            <span>Limoges, France</span>
+          </div>
+          <div className="contact-item">
+            <FontAwesomeIcon icon={faEnvelope} />
+            <span>thierry.salzedas@gmail.com</span>
+          </div>
+          <h3>Mes Réseaux</h3>
+          <div className="contact-item">
+            <a href="https://www.linkedin.com/in/thierry-salzedas-b19121272/" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faLinkedin} />
+              <span>LinkedIn</span>
+            </a>
+          </div>
+          <div className="contact-item">
+            <a href="https://github.com/Citral87" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faGithub} />
+              <span>GitHub</span>
+            </a>
+          </div>
+        </div>
+
+        <div className="contact-form-container">
+          <h2>Contactez Moi !</h2>
+         <form onSubmit={handleSubmit}>
         <label htmlFor="name">Nom:</label>
         <input 
           type="text" 
@@ -60,15 +91,7 @@ function ContactForm() {
 
         <button type="submit">Me contacter</button>
       </form>
-      <div className="contact-info">
-          <div className="contact-item">
-            <FontAwesomeIcon icon={faPhone} />
-            <span>+33 7 77 93 91 31</span>
-          </div>
-          <div className="contact-item">
-            <FontAwesomeIcon icon={faMapMarkerAlt} />
-            <span>Limoges, France</span>
-          </div>
+
         </div>
       </div>
     </section>

@@ -23,7 +23,7 @@
 
 
 .project-card {
-  background: linear-gradient(90deg,#558ba7,#020024 73%,#00d4ff);
+  background: #11456C;
   border-radius: 7px;
   box-shadow: 0px 5px 15px rgba(52, 152, 219, 0.5);
   overflow: hidden;
@@ -66,13 +66,15 @@
   left: 40px;
   right: 40px;
   bottom: 40px;
-  background: white;
-  padding: 20px;
+  background:linear-gradient(90deg,#558ba7,#020024 73%,#00d4ff);
   overflow: auto;
-  border-radius: 4px;
   outline: none;
 }
 
+.carousel .thumbs-wrapper {
+  background: linear-gradient(90deg,#558ba7,#020024 73%,#00d4ff);
+  margin: 0px;
+}
 
 .modal button {
   margin-top: 20px;
@@ -84,7 +86,7 @@
 .carousel .slide {
   background: linear-gradient(90deg,#558ba7,#020024 73%,#00d4ff);
   text-align: center; 
-  border-radius: 0px 0px 15px 15px;
+ 
 }
 
 .carousel .slide img {
@@ -121,7 +123,7 @@
   background: linear-gradient(90deg,#558ba7,#020024 73%,#00d4ff);
 
   padding: 20px;
-  border-radius: 15px 15px 0px 0px;
+ 
 
 }
 

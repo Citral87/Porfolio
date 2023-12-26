@@ -75,16 +75,16 @@ function Skills() {
     <section id="skills">
       <h2>Mes Compétences :</h2>
       <div className="skill-set">
-        {skills.map((skill, index) => (
-          <div
-            className="skill-logo"
-            key={index}
-            onClick={() => openModal(skill)}
-          >
-            <img src={skill.logo} alt={skill.text} />
-            <div className="skill-description">{skill.text}</div>
-          </div>
-        ))}
+      {skills.map((skill, index) => (
+  <div
+    className={`skill-logo ${skill.name === 'Redux' ? 'redux-specific-class' : ''}`}
+    key={index}
+    onClick={() => openModal(skill)}
+  >
+    <img src={skill.logo} alt={skill.text} />
+    <div className="skill-description">{skill.text}</div>
+  </div>
+))}
       </div>
 
       <Modal

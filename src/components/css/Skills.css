@@ -20,13 +20,14 @@
 }
 
 .skill-logo {
-  margin: 1em;
+  margin: 3em;
   position: relative;
   display: flex; 
   align-items: center; 
   justify-content: center; 
   overflow: hidden; 
   cursor: pointer;
+ 
 }
 
 .skill-logo img {
@@ -79,6 +80,10 @@
   font-family: 'Lato', sans-serif;
   padding: 10px ;
   border-radius: 10px;
+}
+
+.redux-specific-class {
+  background-color: antiquewhite;
 }
 
 /* pour les écrans de tablettes */
