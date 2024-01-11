@@ -73,7 +73,7 @@ function Skills() {
 
   return (
     <section id="skills">
-      <h2>Mes Compétences :</h2>
+      <h2>Mes compétences :</h2>
       <div className="skill-set">
       {skills.map((skill, index) => (
   <div
@@ -90,7 +90,7 @@ function Skills() {
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
-        contentLabel="Détail Compétence"
+        contentLabel="Détail compétence"
         className="Modal"
         overlayClassName="Overlay"
       >

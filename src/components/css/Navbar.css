@@ -16,7 +16,7 @@ nav {
     color: white;
     text-decoration: none;
     margin: 0 1em;
-  font-size: 18px;
+  font-size: 20px;
     transition: color 0.3s ease;
     font-family: 'Lato', sans-serif;
     margin-right: 20px;
@@ -26,6 +26,7 @@ nav {
     color: #98BCAF;
     cursor: pointer;
     font-weight: bold;
+    text-decoration: underline;
   }
  
   

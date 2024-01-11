@@ -11,12 +11,13 @@
   flex-wrap: wrap; 
 }
 #skills h2 {
-  font-size: 38px;
+  font-size: 36px;
   color: white;
   text-decoration: underline;
   margin: 0;
   padding-top: 1em;
   padding-bottom: 1em;
+
 }
 
 .skill-logo {
@@ -27,38 +28,44 @@
   justify-content: center; 
   overflow: hidden; 
   cursor: pointer;
+  
  
 }
 
 .skill-logo img {
-  max-width: 100px; 
-  max-height: 100px; 
-  width: auto; 
-  height: auto; 
-  transition: all 0.7s ease-in-out; 
+  width: 100px; 
+  height: 100px;
+  object-fit: contain; 
+  padding: 10px; 
+  background-color: white; 
+  border-radius: 15%; 
+  transition: opacity 0.5s ease, transform 0.5s ease; 
 }
 
+
 .skill-logo:hover img {
-  transform: scale(1.5); 
-  opacity: 0; 
+  opacity: 0.3; 
+  transform: scale(1.1); 
 }
 
 .skill-description {
   position: absolute;
   width: 100%;
-  text-align: center;
-  
+  top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: #11456C;
   color: white;
-  transform: scale(0);
   opacity: 0;
-  transition: all 0.5s ease; 
-  font-size: 0.8em; 
+  transition: opacity 0.3s ease; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 0.8em;
+  text-align: center;
 }
 
 .skill-logo:hover .skill-description {
-  transform: scale(1); 
   opacity: 1; 
 }
 
@@ -75,16 +82,14 @@
 }
 
 .Modal p {
-  background: linear-gradient(90deg,#558ba7,#020024 73%,#00d4ff);
-  color: #ffffff;
+  font-size: 20px;
   font-family: 'Lato', sans-serif;
   padding: 10px ;
   border-radius: 10px;
+ 
 }
 
-.redux-specific-class {
-  background-color: antiquewhite;
-}
+
 
 /* pour les écrans de tablettes */
 @media (max-width: 768px) {
