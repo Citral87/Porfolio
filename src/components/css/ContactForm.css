@@ -118,7 +118,7 @@ form button:hover {
   form input[type="text"],
  form input[type="email"],
   form textarea {
-    width: auto; /* Make input width responsive */
+    width: auto; 
   }
   .contact-wrapper {
     flex-direction: column;
@@ -146,6 +146,13 @@ form button:hover {
   }
   .contact-info h3,
   .contact-item {
-    font-size: 20px; /* Adjust font size for mobile */
+    font-size: 20px; 
   }
+
+  .contact-item a, 
+  .contact-item span {
+    
+    font-size: 18px;
+  }
+
 }
