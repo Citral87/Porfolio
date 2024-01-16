@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faPhone, faMapMarkerAlt, faEnvelope,} from "@fortawesome/free-solid-svg-icons";
+import {
+  faPhone,
+  faMapMarkerAlt,
+  faEnvelope,
+} from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import "../../src/components/css/ContactForm.css";
 
@@ -112,6 +116,7 @@ function ContactForm() {
               value={formData.email}
               onChange={handleChange}
             />
+            <label htmlFor="message">Votre message:</label>
             <textarea
               id="message"
               name="message"
