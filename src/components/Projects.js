@@ -19,23 +19,21 @@ const skillsData = {
 };
 
 const arrowStyles = {
-  position: 'absolute',
+  position: "absolute",
   zIndex: 2,
-  top: 'calc(50% - 15px)',
+  top: "calc(50% - 15px)",
   width: 30,
   height: 30,
-  cursor: 'pointer',
-  backgroundColor: '#071639',
-  color: 'white',
-  border: 'none',
-  borderRadius: '50%',
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
+  cursor: "pointer",
+  backgroundColor: "#071639",
+  color: "white",
+  border: "none",
+  borderRadius: "50%",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
   padding: 0,
-
 };
-
 
 function Projects() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -176,36 +174,36 @@ function Projects() {
           </div>
         </div>
         <Carousel
-  infiniteLoop
-  showArrows={true}
-  showStatus={false}
-  showIndicators={true}
-  showThumbs={false}
-  renderArrowPrev={(onClickHandler, hasPrev) => 
-    hasPrev && (
-      <button 
-        type="button" 
-        onClick={onClickHandler} 
-        style={{ ...arrowStyles, left: 100 }}
-        className="custom-left-arrow"
-      >
-        <FontAwesomeIcon icon={faArrowLeft} />
-      </button>
-    )
-  }
-  renderArrowNext={(onClickHandler, hasNext) => 
-    hasNext && (
-      <button 
-        type="button" 
-        onClick={onClickHandler} 
-        style={{ ...arrowStyles, right: 100 }}
-        className="custom-right-arrow"
-      >
-        <FontAwesomeIcon icon={faArrowRight} />
-      </button>
-    )
-  }
->
+          infiniteLoop
+          showArrows={true}
+          showStatus={false}
+          showIndicators={true}
+          showThumbs={false}
+          renderArrowPrev={(onClickHandler, hasPrev) =>
+            hasPrev && (
+              <button
+                type="button"
+                onClick={onClickHandler}
+                style={{ ...arrowStyles, left: 100 }}
+                className="custom-left-arrow"
+              >
+                <FontAwesomeIcon icon={faArrowLeft} />
+              </button>
+            )
+          }
+          renderArrowNext={(onClickHandler, hasNext) =>
+            hasNext && (
+              <button
+                type="button"
+                onClick={onClickHandler}
+                style={{ ...arrowStyles, right: 100 }}
+                className="custom-right-arrow"
+              >
+                <FontAwesomeIcon icon={faArrowRight} />
+              </button>
+            )
+          }
+        >
           {selectedProject.images &&
             selectedProject.images.map((image, index) => (
               <div key={index} className="carousel-slide">

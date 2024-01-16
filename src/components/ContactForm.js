@@ -1,11 +1,7 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faPhone,
-  faMapMarkerAlt,
-  faEnvelope,
-} from "@fortawesome/free-solid-svg-icons";
+import {faPhone, faMapMarkerAlt, faEnvelope,} from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import "../../src/components/css/ContactForm.css";
 
@@ -96,6 +92,7 @@ function ContactForm() {
             </div>
           )}
           <form onSubmit={handleSubmit}>
+            <label htmlFor="from_name">Votre nom:</label>
             <input
               type="text"
               id="from_name"
@@ -105,6 +102,7 @@ function ContactForm() {
               value={formData.from_name}
               onChange={handleChange}
             />
+            <label htmlFor="email">Adresse Mail:</label>
             <input
               type="email"
               id="email"
@@ -122,7 +120,6 @@ function ContactForm() {
               value={formData.message}
               onChange={handleChange}
             ></textarea>
-
             <button type="submit">Me contacter</button>
           </form>
         </div>
