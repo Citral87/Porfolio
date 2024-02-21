@@ -1,7 +1,6 @@
 #projects {
-  background: linear-gradient(90deg,#558ba7,#020024 73%,#00d4ff);
+  background: linear-gradient(90deg, #558ba7, #020024 73%, #00d4ff);
   padding: 2em;
- 
 }
 
 #projects h2 {
@@ -16,11 +15,10 @@
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); 
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  margin-bottom: 30px; 
+  margin-bottom: 30px;
 }
-
 
 .project-card {
   background: #11456C;
@@ -42,11 +40,12 @@
   object-fit: cover;
 }
 
-.project-card h3, .project-card p {
+.project-card h3,
+.project-card p {
   margin: 5px 5px 5px 10px;
   color: #f0f0f0;
 }
- 
+
 .project-card h3 {
   font-size: 26px;
 }
@@ -58,26 +57,24 @@
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.75);
-  
 }
- .modal {
-  background: #11456C;
 
- }
+.modal {
+  background: #11456C;
+}
+
 .Modal {
-  background: #11456C; 
-  color: white; 
+  background: #11456C;
+  color: white;
   padding: 20px;
   border-radius: 10px;
   max-width: 500px;
   margin: auto;
   box-shadow: 0px 5px 15px rgba(52, 152, 219, 0.5);
-  border: 2px solid rgba(85,139,167,1);
+  border: 2px solid rgba(85, 139, 167, 1);
   max-height: 80vh;
   overflow-y: auto;
 }
-
-
 
 .carousel .thumbs-wrapper {
   background: #11456C;
@@ -86,28 +83,22 @@
 
 .modal button {
   margin-top: 20px;
-  
 }
-
-
 
 .carousel .slide {
   background: #11456C;
-  text-align: center; 
- 
- 
+  text-align: center;
 }
 
 .carousel .slide img {
-  max-width: 100%; 
-  max-height: 400px; 
-  width: auto; 
-  height: auto; 
-  object-fit: cover; 
-  border-radius: 10px; 
+  max-width: 100%;
+  max-height: 400px;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
   margin: 20px auto;
   padding-bottom: 30px;
-
 }
 
 .carousel-caption {
@@ -124,21 +115,16 @@
   display: none;
 }
 
-
-
 .modal-header {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   background: #11456C;
-
   padding: 20px;
- 
-
 }
 
 .carousel .control-arrow {
-  opacity: 1 !important; 
-  background-color: #071639 !important; 
+  opacity: 1 !important;
+  background-color: #071639 !important;
   border-radius: 50%;
   width: 30px;
   height: 30px;
@@ -174,18 +160,16 @@
 }
 
 .modal-title-description {
-  flex: 1; 
+  flex: 1;
   color: #ffffff;
-
 }
 
 .modal-title-description h2 {
   display: flex;
   justify-content: center;
-  font-size:  44px;
+  font-size: 44px;
   text-decoration: underline;
   font-weight: bold;
-
 }
 
 .modal-title-description p {
@@ -197,18 +181,16 @@
 
 .project-skills {
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
   align-items: center;
   margin-right: 50px;
-  
 }
 
 .project-skills img {
-  height: 80px; 
-  width: auto; 
-  margin-bottom: 10px; 
+  height: 80px;
+  width: auto;
+  margin-bottom: 10px;
   padding: 20px;
- 
 }
 
 
@@ -219,13 +201,12 @@
   right: 10px;
   background: transparent;
   font-size: 38px;
-  color: #ffffff; 
+  color: #ffffff;
   cursor: pointer;
   padding: 20px;
 }
 
 .close-button:hover {
- 
   transform: scale(1.5);
 }
 
@@ -234,13 +215,13 @@
 
 .modal button {
   color: #ffffff !important;
-text-transform: uppercase;
-background: #ffffff;
-padding: 20px;
-border: 4px solid !important;
-border-radius: 6px;
-display: inline-block;
-transition: all 0.3s ease 0s;
+  text-transform: uppercase;
+  background: #ffffff;
+  padding: 20px;
+  border: 4px solid !important;
+  border-radius: 6px;
+  display: inline-block;
+  transition: all 0.3s ease 0s;
   padding: 10px 20px;
   margin-top: 20px;
   background-color: #071639;
@@ -249,8 +230,8 @@ transition: all 0.3s ease 0s;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  display: block; 
-  margin-left: auto; 
+  display: block;
+  margin-left: auto;
   margin-right: auto;
   font-family: 'Lato', sans-serif;
 }
@@ -258,44 +239,42 @@ transition: all 0.3s ease 0s;
 
 .modal button:hover {
   color: #faf8f8 !important;
-border-radius: 50px;
-border-color: #faf8f8 !important;
-transition: all 0.3s ease 0s;
-  }
+  border-radius: 50px;
+  border-color: #faf8f8 !important;
+  transition: all 0.3s ease 0s;
+}
+
+.skills-filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  align-items: center;
+}
+
+.skill-filter-item {
+  margin: 0 10px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.3s;
+  color: #ffffff;
+
+}
+
+.skill-filter-item img {
+  height: 30px;
+  width: auto;
+  display: block;
+}
+
+.skill-filter-item:hover,
+.skill-filter-item.active {
+  font-weight: bold;
+  opacity: 1;
+}
 
 
 
-  .skills-filter {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 40px;
-    align-items: center; 
-  }
-  
-  .skill-filter-item {
-    margin: 0 10px;
-    cursor: pointer;
-    opacity: 0.6;
-    transition: opacity 0.3s;
-    color: #ffffff;
-
-  }
-  
-  .skill-filter-item img {
-    height: 30px; 
-    width: auto; 
-    display: block; 
-  }
-  
-  .skill-filter-item:hover,
-  .skill-filter-item.active {
-    font-weight: bold; 
-    opacity: 1;
-  }
-
-  
-
-  /* CSS pour les écrans de tablettes */
+/* CSS pour les écrans de tablettes */
 @media (max-width: 768px) {
   #projects {
     padding: 1.5em;
@@ -350,11 +329,11 @@ transition: all 0.3s ease 0s;
   .modal button {
     font-size: 14px;
   }
-  
+
   .project-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
 }
 
 /* CSS pour les téléphones portables */
@@ -366,6 +345,7 @@ transition: all 0.3s ease 0s;
   .project-grid {
     grid-template-columns: 1fr;
   }
+
   .my-masonry-grid_column {
     padding-left: 15px;
   }
@@ -413,7 +393,3 @@ transition: all 0.3s ease 0s;
     font-size: 12px;
   }
 }
-
-
-
-  

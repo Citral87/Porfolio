@@ -32,7 +32,7 @@
   margin-bottom: 10px;
 }
 
-.contact-item a, 
+.contact-item a,
 .contact-item span {
   color: white;
   text-decoration: none;
@@ -43,11 +43,12 @@
 .contact-item svg {
   color: inherit;
 }
- .contact-wrapper {
+
+.contact-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
- }
+}
 
 .contact-form-container {
   flex-basis: 45%;
@@ -79,7 +80,7 @@ form textarea {
   border: 1px solid #ddd;
   font-size: 16px;
   font-family: 'Lato', sans-serif;
-  margin-bottom: 1em; 
+  margin-bottom: 1em;
 }
 
 form textarea {
@@ -108,14 +109,18 @@ form button:hover {
   .contact-container {
     flex-direction: column;
   }
-  .contact-info, .contact-form-container {
+
+  .contact-info,
+  .contact-form-container {
     flex-basis: 100%;
   }
+
   form input[type="text"],
- form input[type="email"],
+  form input[type="email"],
   form textarea {
-    width: auto; 
+    width: auto;
   }
+
   .contact-wrapper {
     flex-direction: column;
   }
@@ -126,23 +131,24 @@ form button:hover {
     padding: 1em;
   }
 
- .contact-form-container {
-  margin-right: 0px;
-} 
+  .contact-form-container {
+    margin-right: 0px;
+  }
 
-.contact-info {
-  margin-left: 0px;
-}
+  .contact-info {
+    margin-left: 0px;
+  }
 
   .contact-form button {
     font-size: 16px;
   }
+
   .contact-info h3,
   .contact-item {
-    font-size: 20px; 
+    font-size: 20px;
   }
 
-  .contact-item a, 
+  .contact-item a,
   .contact-item span {
     font-size: 18px;
   }
