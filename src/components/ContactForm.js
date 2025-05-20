@@ -15,30 +15,37 @@ function ContactForm() {
     email: "",
     message: "",
   });
+
   const [isEmailSent, setIsEmailSent] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_xefxkrr",
-        "template_ogip1fu",
-        e.target,
-        "YO1-QkFXPLUAEI0xF"
-      )
-      .then(
-        (result) => {
-          console.log("Email successfully sent!");
-          setFormData({ from_name: "", email: "", message: "" });
-          setIsEmailSent(true);
-          setTimeout(() => setIsEmailSent(false), 5000);
-        },
-        (error) => {
-          console.log("Failed to send email:", error);
-          setIsEmailSent(false);
-        }
-      );
+    emailjs.send(
+      "service_jmgglps", // ✅ ID correct
+      "template_ogip1fu", // ✅ Ton template existant
+      {
+        from_name: formData.from_name,
+        email: formData.email,
+        message: formData.message,
+      },
+      "RNdQOP05GPxpgGdtk" // ✅ Ta clé publique
+    )
+    .then(
+      () => {
+        console.log("Email envoyé !");
+        setFormData({ from_name: "", email: "", message: "" });
+        setIsEmailSent(true);
+        setErrorMessage("");
+        setTimeout(() => setIsEmailSent(false), 5000);
+      },
+      (error) => {
+        console.error("Erreur lors de l'envoi :", error);
+        setIsEmailSent(false);
+        setErrorMessage("Une erreur est survenue. Veuillez réessayer.");
+      }
+    );
   };
 
   const handleChange = (e) => {
@@ -88,12 +95,16 @@ function ContactForm() {
             </a>
           </div>
         </div>
+
         <div className="contact-form-container">
-          <h2>Contactez moi !</h2>
+          <h2>Contactez-moi !</h2>
           {isEmailSent && (
             <div className="email-send-confirmation">
               Votre message a été envoyé avec succès !
             </div>
+          )}
+          {errorMessage && (
+            <div className="email-error">{errorMessage}</div>
           )}
           <form onSubmit={handleSubmit}>
             <label htmlFor="from_name">Votre nom:</label>
