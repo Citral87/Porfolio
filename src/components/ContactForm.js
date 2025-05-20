@@ -23,15 +23,15 @@ function ContactForm() {
     e.preventDefault();
 
     emailjs.send(
-      "service_jmgglps", // ✅ ID correct
-      "template_ogip1fu", // ✅ Ton template existant
-      {
-        from_name: formData.from_name,
-        email: formData.email,
-        message: formData.message,
-      },
-      "RNdQOP05GPxpgGdtk" // ✅ Ta clé publique
-    )
+  process.env.REACT_APP_EMAILJS_SERVICE_ID,
+  process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+  {
+    from_name: formData.from_name,
+    email: formData.email,
+    message: formData.message,
+  },
+  process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+)
     .then(
       () => {
         console.log("Email envoyé !");
