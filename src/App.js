@@ -6,6 +6,11 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import ContactForm from './components/ContactForm';
 import Loader from './components/Loader';
+import ReactGA from "react-ga4";
+
+ReactGA.initialize("G-8PLP9NM6ED");
+
+ReactGA.send("pageview");
 
 function App() {
   const [loading, setLoading] = useState(true);
