@@ -127,6 +127,7 @@ a.hs-totop-link {
     letter-spacing: 2px;
     color: #606777;
     position: relative;
+    font-weight: bold;
 }
 
 .hs-inner h2:after {
@@ -616,6 +617,7 @@ ul.marquee li {
     display: inline-block;
     line-height: 30px;
     font-size: 13px;
+    font-weight: bold;
 }
 
 .about-section .about-cover .about-details .fa {
